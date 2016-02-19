@@ -14,6 +14,7 @@ function loadData() {
         var elem = document.getElementById('gitReposLoading');
         elem.parentNode.removeChild(elem);
         $.each(data, function(key,val){
+            if (!val.fork)
             document.getElementById("gitRepos").innerHTML += '<li><strong><em><a target="_blank" href="'+val.html_url+'">'+val.name+'</em></strong></a><br>'+val.description+'</li><br>';
         });
     });
