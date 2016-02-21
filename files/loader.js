@@ -8,6 +8,8 @@ function loadData() {
     //  MyOpenSourceContributions  
         var elem = document.getElementById('myOpenSourceContributionsLoading');
         elem.parentNode.removeChild(elem);
+        var gitContri = document.getElementById("gitContributions");
+        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li><br>';
     
     //  GitRepos
     $.getJSON('https://api.github.com/users/cprakashagr/repos',function(data){
