@@ -26,7 +26,13 @@ function loadData() {
         var elem = document.getElementById('gistsLoading');
         elem.parentNode.removeChild(elem);
         $.each(data, function(key,val){
-            document.getElementById("gists").innerHTML += '<li><strong><em><a target = "_blank" href="'+val.html_url+'">'+val.files.filename+'</em></strong></a><br>'+val.description+'</li><br>';
+            var fileNames = '';
+            for (j in val.files) {
+                fileNames += j;
+                fileNames += ' / ';
+            }
+            fileNames = fileNames.substring(0,fileNames.length-3);
+            document.getElementById("gists").innerHTML += '<li><strong><em><a target = "_blank" href="'+val.html_url+'">'+fileNames+'</em></strong></a><br>'+val.description+'</li><br>';
         });
     });
     
