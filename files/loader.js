@@ -9,7 +9,7 @@ function loadData() {
         var elem = document.getElementById('myOpenSourceContributionsLoading');
         elem.parentNode.removeChild(elem);
         var gitContri = document.getElementById("gitContributions");
-        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li><br />';
+        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li>';
     
     //  GitRepos
     $.getJSON('https://api.github.com/users/cprakashagr/repos',function(data){
@@ -68,7 +68,7 @@ function loadData() {
     //  Hobbies
         var elem = document.getElementById('hobbiesLoading');
         elem.parentNode.removeChild(elem);
-        document.getElementById('hobbies').innerHTML = '<li><em>Singing, Surfing Quora, Computer Programming</em></li><br />';
+        document.getElementById('hobbies').innerHTML = '<li><em>Singing, Surfing Quora, Computer Programming</em></li>';
 
 }
 window.onload = loadData;
