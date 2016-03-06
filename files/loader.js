@@ -3,13 +3,13 @@ function loadData() {
     //  Summary
         var elem = document.getElementById('summaryLoading');
         elem.parentNode.removeChild(elem);
-        document.getElementById('summary').innerHTML = 'Student programmer with 5+ years of experience in Java, C and Android programming with keen interest in research-oriented work. <br><br>Currently working with Snapwiz Inc. on <a target="_blank" href="http://gliderapp.com/">Glider App</a>.<br />';
+        document.getElementById('summary').innerHTML = 'Student programmer with 5+ years of experience in Java, C and Android programming with keen interest in research-oriented work. <br><br>Currently working with Snapwiz Inc. on <a target="_blank" href="http://glider.ai/">Glider App</a>.<br />';
     
     //  MyOpenSourceContributions  
         var elem = document.getElementById('myOpenSourceContributionsLoading');
         elem.parentNode.removeChild(elem);
         var gitContri = document.getElementById("gitContributions");
-        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li>';
+        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP/pull/40'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li>';
     
     //  GitRepos
     $.getJSON('https://api.github.com/users/cprakashagr/repos',function(data){
