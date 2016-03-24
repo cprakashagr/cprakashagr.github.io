@@ -9,7 +9,7 @@ function loadData() {
         var elem = document.getElementById('myOpenSourceContributionsLoading');
         elem.parentNode.removeChild(elem);
         var gitContri = document.getElementById("gitContributions");
-        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP/pull/40'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li><br>'+'<li><strong><em><a target="_blank" href="'+'https://github.com/cloudinary/cloudinary_java/pull/41'+'">'+'cloudinary/cloudinary_java'+'</em></strong></a><br>'+'Cloudinary Java Client Library'+'</li>';
+        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+'https://github.com/delight-im/Android-DDP/pull/40'+'">'+'delight-im/Android-DDP'+'</em></strong></a><br>'+'Meteor\'s Distributed Data Protocol (DDP) for clients on Android'+'</li><br>'+'<li><strong><em><a target="_blank" href="'+'https://github.com/cloudinary/cloudinary_java/pull/41'+'">'+'cloudinary/cloudinary_java'+'</em></strong></a><br>'+'Cloudinary Java Client Library'+'</li><br>'+'<li><strong><em><a target="_blank" href="'+'https://github.com/Ink/filepicker-android/pull/94'+'">'+'Ink/filepicker-android'+'</em></strong></a><br>'+'Android version of Filepicker. Allow your users to pull in their content from Dropbox, Facebook, and more'+'</li>';
     
     //  GitRepos
     $.getJSON('https://api.github.com/users/cprakashagr/repos',function(data){
