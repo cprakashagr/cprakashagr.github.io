@@ -9,8 +9,8 @@ function loadData() {
     var elem = document.getElementById('myOpenSourceContributionsLoading');
     elem.parentNode.removeChild(elem);
     var gitContri = document.getElementById("gitContributions");
-    for (var i in data) {
-        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+data[i].link+'">'+data[i].title+'</em></strong></a><br>'+data[i].desc+'</li><br>';
+    for (var i in openContributionData) {
+        gitContri.innerHTML += '<li><strong><em><a target="_blank" href="'+openContributionData[i].link+'">'+openContributionData[i].title+'</em></strong></a><br>'+openContributionData[i].desc+'</li><br>';
     }
     
     //  GitRepos
@@ -46,9 +46,10 @@ function loadData() {
     //  NonGitProjects
     var elem = document.getElementById('nonGitProjectsLoading');
     elem.parentNode.removeChild(elem);
-    document.getElementById('nonGitProjects').innerHTML = '<li><strong><em><a target = "_blank" href="https://play.google.com/store/apps/details?id=com.cprakashagr.lool">Connext</a></em></strong><br /><!-- Description -->Connext is a messenger application mainly focused on intra-organizational communication services. It provides wide variety of features like audio calling, video calling and text messaging. The application uses WebRTC libraries in Android. The connections are hence, peer-to-peer. The server is used only for peer discovery and online visibility.</li><br />';
-    document.getElementById('nonGitProjects').innerHTML += '<li><strong><em><a href="#">in-Image</a></em></strong><br /><!-- Description --></li><br />';
-
+    var nonGitProj = document.getElementById('nonGitProjects');
+    for (var i in nonGitData) {
+        nonGitProj.innerHTML += '<li><strong><em><a target="_blank" href="'+nonGitData[i].link+'">'+nonGitData[i].title+'</em></strong></a><br>'+nonGitData[i].desc+'</li><br>';
+    }
     
     //  Contribute
     var elem = document.getElementById('contributeLoading');

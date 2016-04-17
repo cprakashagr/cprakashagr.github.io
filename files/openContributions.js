@@ -1,4 +1,4 @@
-var data = 
+var openContributionData = 
 [
     {
         title: 'delight-im/Android-DDP',
