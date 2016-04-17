@@ -65,8 +65,10 @@ function loadData() {
     //  Education
     var elem = document.getElementById('educationLoading');
     elem.parentNode.removeChild(elem);
-    document.getElementById('education').innerHTML = '<li><strong><em>Bachelor in Technology Hons., Computer Science Engineering</em></strong><br>Lovely Professional University, Phagwara India &nbsp;&nbsp; <h6><span style="text-align:right">GPA: 8.08/10&nbsp; | &nbsp;2011-2015</span></h6></li>';
-
+    var edu = document.getElementById('education');
+    for (var i in eduData) {
+        edu.innerHTML += '<li><strong><em>'+eduData[i].title+'</em></strong><br>'+eduData[i].desc01+'<h6><span style="text-align:right">'+eduData[i].desc02+'</span></h6></li>';
+    }
     
     //  Hobbies
     var elem = document.getElementById('hobbiesLoading');
