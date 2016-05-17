@@ -5,6 +5,14 @@ function loadData() {
     elem.parentNode.removeChild(elem);
     document.getElementById('summary').innerHTML = 'Student programmer with 5+ years of experience in Java, C and Android programming with keen interest in research-oriented work. <br><br>Currently working with Snapwiz Inc. on <a target="_blank" href="http://glider.ai/">Glider App</a>.<br />';
     
+    //  Independent AI Work
+    var elem = document.getElementById('aiLoading');
+    elem.parentNode.removeChild(elem);
+    var ai = document.getElementById("aiWorks");
+    for (var i in aiWorks) {
+        ai.innerHTML += '<li><strong><em><a target="_blank" href="'+aiWorks[i].link+'">'+aiWorks[i].title+'</em></strong></a><br>'+aiWorks[i].desc+'</li><br>';
+    }
+    
     //  MyOpenSourceContributions  
     var elem = document.getElementById('myOpenSourceContributionsLoading');
     elem.parentNode.removeChild(elem);
