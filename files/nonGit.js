@@ -2,7 +2,7 @@ var nonGitData =
 [
     {
         title: 'App Delivery',
-        desc: 'AppDelivery is a continous deployment platform for android apps from my personal bucket. It uses Jenkins for GIT polling and building. After successful build, the APK files are served to the hosting server from where it can be downloaded by providing the required configurations.',
+        desc: 'AppDelivery is a continous app delivery platform for android apps from my personal bucket. It uses Jenkins for GIT polling and building. After successful build, the APK files are served to the hosting server from where it can be downloaded by providing the required configurations.',
         link: 'http://appdelivery.cprakashagr.xyz/'
     },
     {
