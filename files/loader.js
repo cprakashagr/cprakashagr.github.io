@@ -13,6 +13,14 @@ function loadData() {
         ai.innerHTML += '<li><strong><em><a target="_blank" href="'+aiWorks[i].link+'">'+aiWorks[i].title+'</em></strong></a><br>'+aiWorks[i].desc+'</li><br>';
     }
     
+    //  Publications
+    var elem = document.getElementById('publicationLoading');
+    elem.parentNode.removeChild(elem);
+    var ai = document.getElementById("publicationWorks");
+    for (var i in aiWorks) {
+        ai.innerHTML += '<li><strong><em><a target="_blank" href="'+aiWorks[i].link+'">'+aiWorks[i].title+'</em></strong></a><br>'+aiWorks[i].desc+'</li><br>';
+    }
+    
     //  MyOpenSourceContributions  
     var elem = document.getElementById('myOpenSourceContributionsLoading');
     elem.parentNode.removeChild(elem);
