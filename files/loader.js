@@ -30,7 +30,7 @@ function loadData() {
     }
     
     //  GitRepos
-    $.getJSON('https://api.github.com/users/cprakashagr/repos',function(data){
+    $.getJSON('https://api.github.com/users/cprakashagr/repos?per_page=500',function(data){
         var elem = document.getElementById('gitReposLoading');
         elem.parentNode.removeChild(elem);
         $.each(data, function(key,val){
