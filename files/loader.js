@@ -3,7 +3,7 @@ function loadData() {
     //  Summary
     var elem = document.getElementById('summaryLoading');
     elem.parentNode.removeChild(elem);
-    document.getElementById('summary').innerHTML = 'Student programmer with 5+ years of experience in Java, C and Android programming with keen interest in research-oriented work. <br><br>Currently working with Snapwiz Inc. on <a target="_blank" href="http://glider.ai/">Glider App</a>.<br />';
+    document.getElementById('summary').innerHTML = 'Now training my Mac with Waves. I love graphs, machine learning and intelligent systems. Programmer with 5+ yrs of experience in Java, Android and Python with keen interest in research-oriented work.<br><br>Currently working with Snapwiz Inc. on <a target="_blank" href="http://glider.ai/">Glider App</a>.<br />';
     
     //  Independent AI Work
     var elem = document.getElementById('aiLoading');
