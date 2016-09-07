@@ -72,12 +72,17 @@ function loadData() {
     elem.parentNode.removeChild(elem);
     document.getElementById("contribute").innerHTML = 'Want to help out? Submit a <a target="_blank" href="https://github.com/cprakashagr?tab=repositories">feature request, open an issue, or submit a patch</a>.<br />';
 
-    
+
+    //  Guest Lectures
+    var elem = document.getElementById('guestLecturesLoading');
+    elem.parentNode.removeChild(elem);
+
+
     //  Skills
     var elem = document.getElementById('skillsLoading');
     elem.parentNode.removeChild(elem);
 
-    
+
     //  Education
     var elem = document.getElementById('educationLoading');
     elem.parentNode.removeChild(elem);
