@@ -76,11 +76,15 @@ function loadData() {
     //  Guest Lectures
     var elem = document.getElementById('guestLecturesLoading');
     elem.parentNode.removeChild(elem);
-
+    var guest = document.getElementById('guestLectures');
+    for (var i in guestLectures) {
+        guest.innerHTML += '<li><strong><em>'+guestLectures[i].title+'</em></strong><br>'+guestLectures[i].desc01+'</li>';
+    }
 
     //  Skills
     var elem = document.getElementById('skillsLoading');
     elem.parentNode.removeChild(elem);
+    document.getElementById("skills").innerHTML = 'NeuroScience, MachineLearning, Android';
 
 
     //  Education
