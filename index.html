@@ -127,25 +127,19 @@
 
         </script>
 
-	<!-- Marketale Tracker -->
-	<script type="text/javascript">
-
-	    	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-        		p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-        		};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-        		n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","http://stream.marketale.com/m/mstream.js","marketale"));
-
-    		window.marketale('newTracker', 'cf', '//stream.marketale.com', {
-        		encodeBase64: false,
-        		appId: 'cpagr1',
-    		});
-
-    		window.marketale('enableLinkClickTracking');
-    		window.marketale('trackPageView');
-    		marketale('enableFormTracking');
-
-	</script>
-	<!-- Marketale tracker end -->
+	<!-- Marketale tracker start -->
+	    <script type="text/javascript" async=1>
+		;(function(s,t,r,e,a,m,x){if(!s[a]){s.StreamNamespace=s.StreamNamespace||[];
+		s.StreamNamespace.push(a);s[a]=function(){(s[a].q=s[a].q||[]).push(arguments)
+		};s[a].q=s[a].q||[];m=t.createElement(r);x=t.getElementsByTagName(r)[0];m.async=1;
+		m.src=e;x.parentNode.insertBefore(m,x)}}(window,document,"script","https://stream.marketale.com/m/mstream.min.js","marketale"));
+		window.marketale('newTracker', 'mt', '//stream.marketale.com', { 
+		  appId: "23n82923s",
+		  encodeBase64: false,
+		});
+		marketale('enableTracking');
+	    </script>
+	<!-- Marketale tracker end-->
     
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
