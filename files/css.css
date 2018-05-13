@@ -47,6 +47,17 @@ p {
   line-height: 1.4em;
 }
 
+.profile{
+  width: 100px;
+  height: 100px;
+  border: 0px solid black;
+  object-fit: scale-down;
+  background-image: url(img.png);
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: 50% 50%; 
+}
+
 #main {
   max-width: 960px;
   margin: 0 auto 30px;
