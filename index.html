@@ -127,19 +127,29 @@
 
         </script>
 
-	<!-- Marketale tracker start -->
+	<!-- Marketale tracker code -->
 	    <script type="text/javascript" async=1>
 		;(function(s,t,r,e,a,m,x){if(!s[a]){s.StreamNamespace=s.StreamNamespace||[];
-		s.StreamNamespace.push(a);s[a]=function(){(s[a].q=s[a].q||[]).push(arguments)
-		};s[a].q=s[a].q||[];m=t.createElement(r);x=t.getElementsByTagName(r)[0];m.async=1;
-		m.src=e;x.parentNode.insertBefore(m,x)}}(window,document,"script","https://stream.marketale.com/m/mstream.min.js","marketale"));
-		window.marketale('newTracker', 'mt', '//stream.marketale.com', { 
-		  appId: "23n82923s",
-		  encodeBase64: false,
+		    s.StreamNamespace.push(a);s[a]=function(){(s[a].q=s[a].q||[]).push(arguments)
+		    };s[a].q=s[a].q||[];m=t.createElement(r);x=t.getElementsByTagName(r)[0];m.async=1;
+		    m.src=e;x.parentNode.insertBefore(m,x)}}(window,document,"script","https://stream.kuratr.com/assets/cpagr3/mstream.min.js","marketale"));
+
+		window.marketale('newTracker', 'mt', 'stream.kuratr.com', {
+		    appId: "cpagr3",
+		    encodeBase64: false
 		});
 		marketale('enableTracking');
-	    </script>
-	<!-- Marketale tracker end-->
+
+		;(function(m,a,r,k,e,t,l){m[e]=function(){(m[e].q=m[e].q || []).push(arguments)};
+		m[e].q=m[e].q||[];t=a.createElement(r);l=a.getElementsByTagName(r)[0];t.async=1;
+		t.src=k;l.parentNode.insertBefore(t,l)})(window,document,'script','https://stream.kuratr.com/assets/cpagr3/sstream.min.js','marketaleSR');
+
+		marketaleSR({
+		    host: 'stream.kuratr.com',
+		    profileID: 'cpagr3'
+		});
+    	    </script>
+	<!-- Marketale tracker code /-->
     
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
