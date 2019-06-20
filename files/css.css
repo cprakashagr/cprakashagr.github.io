@@ -17,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #0081b6;
+  color: #00897B;
   padding: 2px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -59,6 +59,11 @@ p {
 
 #copy {
   margin: 60px 20px 0;
+}
+
+#name {
+  /*color: #B00020;*/
+  color: #C51162;
 }
 
 .hr {
