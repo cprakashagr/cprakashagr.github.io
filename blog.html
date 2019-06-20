@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://julia.im/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>the blog from C. | my space</title>
+  <meta name="charset" content="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="files/prof.css">
+  
+  <!-- Marketale tracker code -->
+    <script type="text/javascript" async=1>
+        ;(function(s,t,r,e,a,m,x){if(!s[a]){s.StreamNamespace=s.StreamNamespace||[];
+            s.StreamNamespace.push(a);s[a]=function(){(s[a].q=s[a].q||[]).push(arguments)
+            };s[a].q=s[a].q||[];m=t.createElement(r);x=t.getElementsByTagName(r)[0];m.async=1;
+            m.src=e;x.parentNode.insertBefore(m,x)}}(window,document,"script","https://stream.kuratr.com/assets/cpagr3/mstream.min.js","marketale"));
+
+        window.marketale('newTracker', 'mt', 'stream.kuratr.com', {
+            appId: "cpagr3",
+            encodeBase64: false
+        });
+        marketale('enableTracking');
+    
+        ;(function(m,a,r,k,e,t,l){m[e]=function(){(m[e].q=m[e].q || []).push(arguments)};
+        m[e].q=m[e].q||[];t=a.createElement(r);l=a.getElementsByTagName(r)[0];t.async=1;
+        t.src=k;l.parentNode.insertBefore(t,l)})(window,document,'script','https://stream.kuratr.com/assets/cpagr3/sstream.min.js','marketaleSR');
+
+        marketaleSR({
+            host: 'stream.kuratr.com',
+            profileID: 'cpagr3'
+        });
+    </script>
+  <!-- Marketale tracker code /-->
+</head>
+
+<body>
+
+  <script>
+    function loadBlog() {
+
+      $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40cprakashagr", function(feeds) {
+
+        if (feeds.status === "ok") {
+          var blogElement = document.getElementById("blog");
+
+          var blog = '<table cellspacing="10" cellpadding="10">';
+
+          for (var i = 0; i < feeds.items.length; i++) {
+            feed = feeds.items[i];
+            title = feed.title;
+            pubDate = feed.pubDate;
+            link = feed.link;
+
+            var catList = '';
+            for (var j = 0; j < feed.categories.length; j++) {
+              var cat = feed.categories[j];
+              catList += '<a href="https://medium.com/tag/'+ cat +'" target="_blank"><span id="category">'+ cat +'</span></a>';
+            }
+
+            var shortDesc = feed.content.replace(/<[^>]*>?/gm, '').replace(title, " ").replace('\n', ' ').substring(0, 400).trim() + '...';
+
+            var tableRow = '<tr><td><a id="bloga" href="'+ link +'" target="_blank"><h2>'+ title +'</h2></a><h3>Published on: '+ pubDate.split(' ')[0] +'</h3><h2 id="content">'+ shortDesc +'</h2><br>'+ catList +'<br><br></td></tr>';
+            blog += tableRow;
+          }
+
+          blog += '</table>';
+
+          blogElement.innerHTML = blog;
+        }
+      });
+    }
+
+    window.onload = loadBlog;
+  </script>
+
+  <div id="main">
+    <div id="copy">
+      <h3><a href="#" onclick="window.history.go(-1); return false;">go back</a></h3>
+      <h1><span id="name">my space</span></h1>
+      <br>
+      <span id="workLink">THE PERSONAL BLOG FROM C.</span>
+      <h2 style="display: inline;"><br />
+        <div id="blog">
+        </div>
+      </h2>
+  </div>
+
+  <!-- Google Analytics Tracker -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-83960670-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+</body></html>
