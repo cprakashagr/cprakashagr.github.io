@@ -97,17 +97,19 @@ td {
   font-size: 16px;
 }
 
-#bloga {
+/*#bloga {
   color: red;
   line-height: 2em; 
-}
+}*/
 
 #category {
   /*background: red;*/
   padding: 5px; 
   margin: 5px;
+  margin-right: 10px;
+  margin-left: 0px;
   font-size: 10px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   -moz-box-shadow: 0 0 3px red;
   -webkit-box-shadow: 0 0 3px red;
@@ -117,7 +119,7 @@ td {
 
 #content {
   margin-top: 5px;
-  line-height: 1.3em;
+  line-height: 1.5em;
   font-style: 16px;
 }
 

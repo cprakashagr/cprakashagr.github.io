@@ -35,6 +35,13 @@
 <body>
 
   <script>
+
+   function format_date(date_string) {
+        let date_parts = date_string.split('-');
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        return ("0" + date_parts[2]).slice(-2) + " " + monthNames[date_parts[1]-1] + " " + date_parts[0];
+    }
+ 
     function loadBlog() {
 
       $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40cprakashagr", function(feeds) {
@@ -48,7 +55,7 @@
             feed = feeds.items[i];
             title = feed.title;
             pubDate = feed.pubDate;
-            link = feed.link;
+            link = feed.guid;
 
             var catList = '';
             for (var j = 0; j < feed.categories.length; j++) {
@@ -58,7 +65,7 @@
 
             var shortDesc = feed.content.replace(/<[^>]*>?/gm, '').replace(title, " ").replace('\n', ' ').substring(0, 400).trim() + '...';
 
-            var tableRow = '<tr><td><a id="bloga" href="'+ link +'" target="_blank"><h2>'+ title +'</h2></a><h3>Published on: '+ pubDate.split(' ')[0] +'</h3><h2 id="content">'+ shortDesc +'</h2><br>'+ catList +'<br><br></td></tr>';
+            var tableRow = '<tr><td><a id="bloga" href="'+ link +'" target="_blank"><h2>'+ title +'</h2></a><h3>'+ format_date(pubDate.split(' ')[0]) +'</h3><div id="content">'+ shortDesc +'</div><br>'+ catList +'<br><br></td></tr>';
             blog += tableRow;
           }
 
