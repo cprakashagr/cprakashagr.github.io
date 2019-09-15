@@ -40,12 +40,12 @@ m.src=a;x.parentNode.insertBefore(m,x)})(window,document,'script','https://dc.ku
             var catList = '';
             for (var j = 0; j < feed.categories.length; j++) {
               var cat = feed.categories[j];
-              catList += '<a href="https://medium.com/tag/'+ cat +'" target="_blank" rel="noopener noreferrer nofollow"><span id="category">'+ cat +'</span></a>';
+              catList += '<a href="https://medium.com/tag/'+ cat +'?utm_source=cprakashagr.xyz" target="_blank" rel="noopener nofollow"><span id="category">'+ cat +'</span></a>';
             }
 
             var shortDesc = feed.content.replace(/<[^>]*>?/gm, '').replace(title, " ").replace('\n', ' ').substring(0, 400).trim() + '...';
 
-            var tableRow = '<tr><td><a id="bloga" href="'+ link +'" target="_blank" rel="noopener noreferrer nofollow"><h2>'+ title +'</h2></a><h3>'+ format_date(pubDate.split(' ')[0]) +'</h3><div id="content">'+ shortDesc +'</div><br>'+ catList +'<br><br></td></tr>';
+            var tableRow = '<tr><td><a id="bloga" href="'+ link +'?utm_source=cprakashagr.xyz" target="_blank" rel="noopener nofollow"><h2>'+ title +'</h2></a><h3>'+ format_date(pubDate.split(' ')[0]) +'</h3><div id="content">'+ shortDesc +'</div><br>'+ catList +'<br><br></td></tr>';
             blog += tableRow;
           }
 
