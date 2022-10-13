@@ -1,1 +1,1 @@
-http://65.2.153.26:8080/\#/mobile/login
+http://65.2.153.26:8080/#/mobile/login
